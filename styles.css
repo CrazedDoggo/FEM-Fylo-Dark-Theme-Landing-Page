@@ -1,14 +1,269 @@
-/*GENERAL ||*/
+/* *GENERAL ||*/
 
-/*TYPOGRAPHY ||*/
+:root {
+    /*BACKGROUNDS*/
+    --dark-blue-intro-email: hsl(217, 28%, 15%);
+    --dark-blue-main: hsl(218, 28%, 13%);
+    --dark-blue-footer: hsl(216, 53%, 9%);
+    --dark-blue-testimonials: hsl(219, 30%, 18%);
 
-/*COMPONENTS ||*/
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --light-red: hsl(0, 100%, 63%);
 
-/*LAYOUT ||*/
+    --white: hsl(0, 0%, 100%);
 
-/*QUERIES ||*/
+    --main-font: 'Open Sans', Arial, Helvetica, sans-serif;
+    --secondary-font: 'Raleway', Arial, Helvetica, sans-serif;
+}
 
-/*ATTRIBUTION ||*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-blue-main);
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* *TYPOGRAPHY ||*/
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: .8em 0;
+}
+
+h3 {
+    margin: .5em 0;
+}
+
+h1,
+h2,
+h3,
+nav,
+.button--blue {
+    font-family: var(--secondary-font);
+}
+
+p:not(.name) {
+    margin: 1em 0;
+}
+
+figcaption {
+    margin-bottom: 1.5em;
+}
+
+.link--blue {
+    color: var(--cyan);
+    border-bottom: 2px solid var(--cyan);
+    padding-bottom: .35em;
+}
+.link--blue img {
+    width: 20px;
+    margin-left: .2em;
+    margin-bottom: .2em;
+    vertical-align: middle; 
+    display: inline-block;
+}
+
+.name {
+    font-size: .7em;
+    color: rgb(207, 207, 207);
+}
+
+input {
+    font-family: var(--main-font);
+    font-size: .875rem;
+}
+::placeholder {
+    opacity: .3;
+    font-size: .7rem;
+}
+
+/* *COMPONENTS ||*/
+
+button, input {
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 1em 2em;
+    margin: 1em 0;
+}
+
+.button--blue {
+    background: linear-gradient(to right, var(--cyan) 0%, hsl(192, 68%, 64%) 50%, hsl(192, 60%, 57%) 95%);
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 75%;
+}
+
+.testimonials {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+}
+.testimonials::before {
+    content: url(images/bg-quotes.png);
+    position: absolute;
+    z-index: -1;
+    top: -35px;
+    left: 10%;
+}
+.testimonial {
+    background-color: var(--dark-blue-testimonials);
+    border-radius: 10px;
+    padding: 2em;
+    flex: 1 1 320px;
+}
+.bio img {
+    border-radius: 100%;
+}
+
+.cta {
+    background-color: var(--dark-blue-intro-email);
+    margin: 1em 2em -13em 2em;
+    border-radius: 10px;
+    padding: 3em;
+    text-align: center;
+    max-width: 700px;
+}
+.cta > input[type="email"],
+.cta > .button--blue {
+    width: 100%;
+}
+
+/* *LAYOUT ||*/
+
+.wrapper {
+    padding: 0 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    row-gap: 20em;
+}
+
+header {
+    background-color: var(--dark-blue-intro-email);
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+header img,
+.perk img {
+    max-width: 90px;
+}
+nav ul {
+    display: flex;
+    gap: 1.5em;
+}
+
+.hero {
+    text-align: center;
+    background: url(images/bg-curvy-mobile.svg) no-repeat center,linear-gradient(var(--dark-blue-intro-email) 60%, var(--dark-blue-main) 40%);
+}
+
+.perks {
+    text-align: center;
+    display: grid;
+    gap: 6em;
+}
+
+.ad {
+    display: grid;
+}
+.ad > img {
+    margin-bottom: 3em;
+}
+
+.bio {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 1em;
+}
+
+footer {
+    background-color: var(--dark-blue-footer);
+    padding-top: 20em;
+    font-size: 1.2em;
+}
+.footer__logo {
+    margin-bottom: 2em;
+}
+.footer__items {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3em;
+}
+.footer__links,
+.contact {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5em;
+}
+
+.contact > li {
+    padding-left: 1em;
+    position: relative;
+}
+.contact > li::before {
+    position: absolute;
+    top: .2em;
+    left: -1em;
+}
+.address::before {
+    content: url(images/icon-location.svg);
+}
+.phone::before {
+    content: url(images/icon-phone.svg);
+}
+.email::before {
+    content: url(images/icon-email.svg);
+}
+
+
+.socials {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1em;
+}
+.socials > li {
+    max-width: 35px;
+}
+
+/* *QUERIES ||*/
+
+@media(min-width: 1000px) {
+    
+}
+
+/* *ATTRIBUTION ||*/
 
 .attribution { 
     font-size: 11px; text-align: center; 

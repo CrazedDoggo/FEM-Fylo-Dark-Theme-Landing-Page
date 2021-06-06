@@ -45,9 +45,13 @@ Users should be able to:
 
 ### What I learned
 
+While building my hero element, I had an issue with the background image in respect to the color. After the "wave" image, the background color completely changes to become the global dark blue. I decided to find a way to split the background-color into two, which I found online through linear gradients.
+
 ### Continued development
 
 ### Useful resources
+
+[Split background color](https://stackoverflow.com/questions/8541081/css-set-a-background-color-which-is-50-of-the-width-of-the-window)
 
 ## Author
 
