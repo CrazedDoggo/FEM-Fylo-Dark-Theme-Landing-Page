@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](design/finished-site.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://crazeddoggo.github.io/FEM-Fylo-Dark-Theme-Landing-Page/](https://crazeddoggo.github.io/FEM-Fylo-Dark-Theme-Landing-Page/)
 
 ## My process
 
@@ -48,6 +48,8 @@ Users should be able to:
 While building my hero element, I had an issue with the background image in respect to the color. After the "wave" image, the background color completely changes to become the global dark blue. I decided to find a way to split the background-color into two, which I found online through linear gradients.
 
 ### Continued development
+
+I initially started building this challenge while not feeling that well, and it can definitely be gutted and overhauled in the future. After coming back in a better state of mind, I decided to finish the footer and had to rewrite and deal with previous styles and cascading issues. I'll put this on my roadmap to possibly revisit this and overhaul it with a much more cleaner, elegant solution.
 
 ### Useful resources
 
